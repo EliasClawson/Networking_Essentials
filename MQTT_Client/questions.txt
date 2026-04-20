@@ -1,0 +1,22 @@
+1. What are the different QoS levels that MQTT provides? Provide an explanation of when you would use each of the QoS levels.
+
+QoS 0: Messages sent once, could easily be lost (for low priority data)
+QoS 1: Broker acknowledges receipt of message, but there is a potential for duplication
+QoS 2: Message is sent, broker must acknowledge receipt of message. Message will resend until broker confirms it got it (high priority data and transactions)
+
+2. MQTT uses TCP under the hood. Why then would MQTT include QoS when TCP provides reliability?
+
+Tcp provides for reliable data transmision, in the right order. MQTT gives reliability for the general transmission, resending until it's been confirmed. 
+
+3. What are some benefits of using MQTT (provide 2 examples)? What are some disadvantages of using MQTT (provide 2 examples)?
+
+- Lightweight, easy to use protocol
+- Can add reliability
+
+- Limited functionality, can only do simiple publish-subscribe messaging
+- Not a lot of security
+
+4. What are some commercial products that use MQTT (provide 2). Why do you think the company decided to use MQTT for that product?
+
+- Smart home stuff like lightbulbs and thermostats - Basic transmision that doesn't need much security or features
+- Data collection from sensors - Quick and lightweight transmission
